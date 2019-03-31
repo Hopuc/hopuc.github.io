@@ -1,9 +1,291 @@
 <html>
-<head>
-<title>HOPUC</title>
-</head>
-<body>
-<p>Hi!</p>
-<p>HOPUC</p>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>HOPUC</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+		<style>
+			body {
+				background: #888;
+				//background: url(img/elephan.jpg) center top no-repeat;
+				background: url(https://i.loli.net/2019/03/31/5ca0857fab712.jpg) center top no-repeat;
+				background-size: cover;
+				margin: 0;
+			}
+
+			.header {
+				height: 60px;
+				width: 100%;
+				top: 0;
+				background-color: rgba(10, 10, 10, .3);
+				position: fixed;
+				z-index: 10;
+			}
+
+			.logo {
+				margin-left: 10px;
+			}
+
+			.logo-svg {
+				margin: 10px;
+			}
+
+			.box {
+				//width: 900px;
+				//height: 600px;
+				max-width: 970px;
+				min-height: 58%;
+				height: auto;
+				margin: 7% auto;
+				padding-top: 60px;
+				//box-sizing: border-box;
+				//display: flex;
+				display: block;
+				//justify-content: center;
+				//flex-wrap: wrap;
+			}
+
+			.item {
+				//height: 15vw;
+				//width: 25vw;
+				height: 180px;
+				width: 300px;
+				//background-color: #124191;
+				margin: 10px 10px;
+				border-radius: 5px;
+				display: inline-block;
+				//flex: 1 0 auto;
+				//flex: 1 0 45%;
+				position: relative;
+				//position: absolute;
+				//overflow: hidden;
+				//opacity: .8;
+				cursor: pointer;
+				transition: 800ms ease all;
+				outline: none;
+			}
+
+			.item:hover {
+				background-color: rgba(100, 100, 100, .7);
+			}
+
+			.item:hover .info {
+				display: block;
+			}
+
+			.item-title {
+				font-size: 2rem;
+				font-weight: 700;
+				color: #fff;
+				width: 67%;
+				text-align: center;
+				padding: 20px 0;
+				margin: 0 auto;
+			}
+
+			.info {
+				height: 35%;
+				width: 100%;
+				position: absolute;
+				top: 65%;
+				left: 0;
+				background-color: rgba(243, 243, 243, 0);
+				display: none;
+			}
+
+			.info p {
+				//font-size: 1.4rem;
+				font-weight: 700;
+				color: #fff;
+				//width: 67%;
+				text-align: center;
+				padding: 18px 0;
+				margin: 0 auto;
+			}
+
+			.info p a {
+				font-size: 18px;
+				line-height: 20px;
+				font-weight: 700;
+				color: #fff;
+			}
+
+			.i1 {
+				background-color: rgba(71, 85, 136, .85);
+			}
+
+			.i2 {
+				background-color: rgba(237, 84, 91, .85);
+			}
+
+			.i3 {
+				background-color: rgba(242, 128, 0, .85);
+			}
+
+			.i4 {
+				background-color: rgba(150, 123, 210, .85);
+			}
+
+			.i5 {
+				background-color: rgba(222, 212, 34, .85);
+			}
+
+			.i6 {
+				background-color: rgba(91, 190, 175, .85);
+			}
+
+			@media screen and (max-width: 970px) {
+				.box {
+					max-width: 540px;
+					margin: 5% auto;
+				}
+
+				.item {
+					//width: 50%;
+					//float: left;
+					//margin: 0;
+					//border-radius: 0;
+
+					height: 150px;
+					width: 250px;
+					margin: 8px 8px;
+				}
+			}
+
+
+			@media screen and (max-width: 540px) {
+				.box {
+					max-width: 435px;
+					margin: 3% auto;
+				}
+
+				.item {
+					//width: 100%;
+					//float: left;
+					//margin: 0;
+					//border-radius: 0;
+
+					height: 120px;
+					width: 200px;
+					margin: 7px 7px;
+				}
+
+				.info p a {
+					font-size: 16px;
+					line-height: 18px;
+				}
+
+			}
+
+			@media screen and (max-width: 435px) {
+				.box {
+					max-width: 82vw;
+					margin: 1% auto;
+				}
+
+				.item {
+					//width: 100%;
+					//float: left;
+					//margin: 0;
+					//border-radius: 0;
+
+					height: 48vw;
+					width: 80vw;
+					margin: 6px 6px;
+				}
+
+				.info p a {
+					font-size: 16px;
+					line-height: 18px;
+				}
+			}
+
+			.footer {
+				bottom: 0;
+				left: 0;
+				//height: 36px;
+				width: 100%;
+				margin: 5px 0;
+				//position: absolute;
+				text-align: center;
+			}
+
+			.copyright {
+				color: #ddd;
+				font-size: 14px;
+			}
+
+			.copyright a {
+				color: #ddd;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<header>
+				<a href="/" class="logo" title="HOPUC">
+					<svg version="1.1" id="logo" class="logo-svg" width="40px" height="40px" xmlns="http://www.w3.org/2000/svg"
+					 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;"
+					 xml:space="preserve">
+						<g id="logo-ai" fill="#fff">
+							<g id="LWPOLYLINE_8_">
+								<polygon points="462.9,48.5 215.2,334.2 393,444.2"></polygon>
+							</g>
+							<g id="LWPOLYLINE_7_">
+								<polygon points="254.5,399.9 204.6,369 216.2,461.8"></polygon>
+							</g>
+							<g id="LWPOLYLINE_6_">
+								<polygon points="462.9,48.5 31.5,220.5 182.8,314.1"></polygon>
+							</g>
+						</g>
+					</svg>
+				</a>
+			</header>
+		</div>
+
+		<div class="box">
+			<div class="item i1">
+				<p class="item-title">发现</p>
+				<div class="icon"></div>
+				<div class="info">
+					<p><a href="">http://v.hopuc.com</a></p>
+				</div>
+			</div>
+			<div class="item i2">
+				<p class="item-title">商城</p>
+				<div class="icon"></div>
+				<div class="info">
+					<p><a href="http://mall.hopuc.com">http://mall.hopuc.com</a></p>
+				</div>
+			</div>
+			<div class="item i3">
+				<p class="item-title">音乐</p>
+				<div class="icon"></div>
+				<div class="info">
+					<p><a href="http://music.hopuc.com">http://music.hopuc.com</a></p>
+				</div>
+			</div>
+			<div class="item i4">
+				<p class="item-title">论坛</p>
+				<div class="icon"></div>
+				<div class="info">
+					<p><a href="http://bbs.hopuc.com">http://bbs.hopuc.com</a></p>
+				</div>
+			</div>
+			<div class="item i5">
+				<p class="item-title">留言</p>
+			</div>
+			<div class="item i6">
+				<p class="item-title">关于</p>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p class="copyright">
+				<span>©2019 Hopuc </span> &nbsp;
+				<span><a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">冀ICP备15030379号-1</a></span>
+			</p>
+		</div>
+
+	</body>
 </html>
